@@ -95,12 +95,13 @@ export default function Input() {
                     setDateOfBirth('');
                   }
                 }}
-                dateFormat="yyyy-MM-dd"
-                placeholderText="Select your birth date"
+                dateFormat={["yyyy/MM/dd", "yyyy-MM-dd", "MM/dd/yyyy", "dd/MM/yyyy", "dd-MM-yyyy"]}
+                placeholderText="Y-m-d"
                 showYearDropdown
                 scrollableYearDropdown
                 yearDropdownItemNumber={100}
                 maxDate={new Date()}
+                isClearable
                 className="w-full px-4 py-3 bg-surface/50 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-all text-white placeholder:text-white/20"
                 wrapperClassName="w-full"
                 required
